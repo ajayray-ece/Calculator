@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +9,19 @@
 </head>
 <body>
     <div class="calculator-container">
-        <h1 class="calculator-title">ROY</h1>
+        <div class="title-container">
+            <h1 class="calculator-title">
+                <span>R</span>
+                <span>O</span>
+                <span>Y</span>
+            </h1>
+        </div>
         <div class="calculator">
             <input id="display" type="text" class="display" disabled>
             <div class="buttons">
                 <button class="btn clear" onclick="clearDisplay()">C</button>
                 <button class="btn operator" onclick="appendValue('/')">/</button>
-                <button class="btn operator" onclick="appendValue('*')">*</button>
+                <button class="btn operator" onclick="appendValue('x')">×</button>
                 <button class="btn delete" onclick="deleteLast()">⌫</button>
                 
                 <button class="btn" onclick="appendValue('7')">7</button>
@@ -36,12 +41,14 @@
                 
                 <button class="btn zero" onclick="appendValue('0')">0</button>
                 <button class="btn" onclick="appendValue('.')">.</button>
+                
+                <button class="btn function" onclick="calculateSquareRoot()">√</button>
+                <button class="btn function" onclick="calculateSquare()">x²</button>
                 <button class="btn function" onclick="calculateTrig('sin')">sin</button>
                 <button class="btn function" onclick="calculateTrig('cos')">cos</button>
                 <button class="btn function" onclick="calculateTrig('tan')">tan</button>
                 <button class="btn function" onclick="calculateLog()">log</button>
                 <button class="btn function" onclick="calculateExp()">exp</button>
-                <button class="btn function" onclick="calculateSquare()">x²</button>
             </div>
         </div>
     </div>
